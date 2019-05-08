@@ -1,0 +1,239 @@
+body {
+    font-family: 'Merriweather', serif;
+}
+.navbar {
+    background-color:#BC4123;
+}
+img {
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+}
+
+
+h1 {
+    
+    font-size: 2.5em;
+    font-weight: bold;
+ text-shadow: 0 0 3px #FF0000;
+}
+
+.firstcharacter {
+    color: #BC4123;
+    float: left;
+    font-family: Merriweather;
+    font-size: 75px;
+    line-height: 60px;
+    padding-top: 4px;
+    padding-right: 8px;
+    padding-left: 3px;
+}
+
+picture {
+    max-width: 100%;
+    border: 2px solid gray;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+button {
+    width: 110px;
+    height: 35px;
+    background: #BC4123;
+    transition: width 2s, height 1s;
+    /* For Safari 3.1 to 6.0 */
+    transition: width 2s, height 1s;
+}
+
+button:hover {
+    width: 125px;
+    height: 50px;
+}
+
+normal {
+    font-style: normal;
+}
+
+
+
+* {
+    box-sizing: border-box;
+
+}
+
+legend {
+    color: black;
+    font-size: 1.4em;
+    font-weight: bold;
+    padding: 1.5px;
+}
+
+input:focus,
+
+textarea:focus 
+{
+    overflow: inherit;
+    color: black;
+    width: auto;
+    height: auto;
+}
+
+/*  grids */
+
+main {
+    display: grid;
+}
+
+/* hero content */
+
+.content {
+    display: grid;
+}
+
+/* about content */
+
+.about-content {
+    display: grid;
+}
+
+/*  gallery */
+
+.gallery {
+    display: grid;
+}
+
+figure {
+    display: grid;
+}
+
+/*  article */
+
+article {
+    display: grid;
+}
+
+/* form container */
+.form-container {
+    display: grid;
+}
+
+/* footer */
+
+footer {
+    display: grid;
+}
+
+/*  layout */
+
+/*   mobile is the default layout*/
+
+/* tablet layout >=48rem (768px) */
+
+@media screen and (min-width: 48rem) {
+
+    /*      hero content &	about content */
+
+    .content {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .content picture,
+    .content p,
+    .about-content {
+        grid-column: 2/3;
+        align-self: center;
+        justify-self: center;
+    }
+
+    .mobile-first {
+        display: none;
+    }
+
+    /* Gallery*/
+    .gallery {
+        grid-template-columns: 1fr 6fr 1fr;
+    }
+
+    .gallery h3,
+    .gallery figure {
+        grid-column: 2/3;
+        align-self: center;
+        justify-self: center;
+
+    }
+
+    /* figure inside gallery */
+    figure {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-items: center;
+    }
+
+    /*	article */
+    article {
+        grid-template-columns: 1fr 48rem 1fr;
+    }
+
+    article h1,
+    .story-body {
+        grid-column: 2/3;
+    }
+
+    article h1 {
+        align-self: center;
+        justify-self: center;
+    }
+
+
+    /*	form */
+    .form-container {
+        grid-template-columns: 1fr 48rem 1fr;
+    }
+
+    .form-container h1,
+    .form-container form {
+        grid-column: 2/3;
+    }
+
+    form {
+        margin: 0;
+    }
+
+    .form-container h1 {
+        align-self: center;
+        justify-self: center;
+    }
+
+}
+
+/* wide screen layout >=64rem (1024px) */
+
+@media screen and (min-width: 64rem) {
+
+    /*      hero content */
+
+    /*	about content */
+
+    /*	gallery */
+    .gallery {
+        grid-template-columns: 4.5fr 2.5fr 4fr;
+    }
+
+    .gallery h3 {
+        grid-column: 1/4;
+    }
+
+    .gallery figure {
+        grid-column: auto;
+
+    }
+
+
+    .gallery figcaption {
+        margin-left: 2rem;
+    }
+
+    /*	article */
+
+    /*	form */
+}
